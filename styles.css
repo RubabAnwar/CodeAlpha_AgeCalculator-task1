@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.age-calculator {
+    background-color: lightcyan;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="date"].error {
+    border: 2px solid red;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: darkturquoise;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: mediumturquoise;
+    border: 1px solid darkturquoise;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Character animation */
+.character {
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.character.show {
+    max-width: 300px;
+    display: block;
+    bottom: 15px;
+    opacity: 1;
+}
+
+/* Additional animation if needed */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+.character.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Responsive styles */
+@media (orientation: landscape) {
+    .character {
+        display: none; /* Hide character images in landscape mode */
+    }
+    .character.show {
+        display: none; /* Hide character images in landscape mode */
+    }
+    .age-calculator {
+        width: 60%; /* Make calculator width responsive */
+        padding: 30px; /* Adjust padding */
+    }
+}
