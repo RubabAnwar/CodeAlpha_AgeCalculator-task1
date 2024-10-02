@@ -1,5 +1,3 @@
-Here’s a sample README file for your GitHub repository:
-
 # Age Calculator
 
 This project is a simple Age Calculator web application developed as my first task at CodeAlpha as a web development intern. The application allows users to input their birthdate and calculates their age in years, months, and days. It also includes animations and error handling for future dates.
